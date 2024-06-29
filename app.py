@@ -53,6 +53,10 @@ def remove_metadata(filepath):
 def index():
     return render_template('index.html')
 
+@app.route('/embed')
+def embed():
+    return render_template('embed.html')
+
 @app.route('/download', methods=['POST'])
 def download_video():
     data = request.json
